@@ -17,3 +17,23 @@ const TextStyle cardsTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
 );
+
+const TextStyle titleTextStyle = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
+
+const TextStyle resultTextStyle = TextStyle(
+  color: Color(0xFF24D876),
+  fontWeight: FontWeight.bold,
+  fontSize: 22.0,
+);
+
+const TextStyle bmiTextStyle = TextStyle(
+  fontSize: 100.0,
+  fontWeight: FontWeight.bold,
+);
+
+const TextStyle bodyTextStyle = TextStyle(
+  fontSize: 22.0,
+);

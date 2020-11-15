@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bmi_calculator/constants.dart';
+import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/core/constants.dart';
 
 class GenderWidget extends StatelessWidget {
   GenderWidget(this.icon, this.text);
