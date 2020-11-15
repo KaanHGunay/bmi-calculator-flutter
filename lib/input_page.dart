@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/genders.dart';
+import 'package:bmi_calculator/round_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:bmi_calculator/gender_widget.dart';
@@ -14,6 +15,8 @@ class _InputPageState extends State<InputPage> {
   Color maleCardColor = inactiveCardColor;
   Color femaleCardColor = inactiveCardColor;
   int height = 180;
+  int weight = 80;
+  int age = 20;
 
   void selectGender(Genders gender) {
     maleCardColor =
@@ -104,11 +107,85 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: activeCardColor,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'WEIGHT',
+                          style: labelStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: cardsTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              iconData: FontAwesomeIcons.minus,
+                              onPress: () {
+                                setState(() {
+                                  this.weight--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              iconData: FontAwesomeIcons.plus,
+                              onPress: () {
+                                setState(() {
+                                  this.weight++;
+                                });
+                              },
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     color: activeCardColor,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'AGE',
+                          style: labelStyle,
+                        ),
+                        Text(
+                          age.toString(),
+                          style: cardsTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              iconData: FontAwesomeIcons.minus,
+                              onPress: () {
+                                setState(() {
+                                  this.age--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              iconData: FontAwesomeIcons.plus,
+                              onPress: () {
+                                setState(() {
+                                  this.age++;
+                                });
+                              },
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
