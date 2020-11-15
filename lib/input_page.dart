@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/genders.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:bmi_calculator/gender_widget.dart';
@@ -14,9 +15,15 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-
   Color maleCardColor = inactiveCardColor;
   Color femaleCardColor = inactiveCardColor;
+
+  void selectGender(Genders gender) {
+    maleCardColor =
+        gender == Genders.MALE ? activeCardColor : inactiveCardColor;
+    femaleCardColor =
+        gender == Genders.FEMALE ? activeCardColor : inactiveCardColor;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,31 +37,25 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
-                        maleCardColor = activeCardColor;
-                        femaleCardColor = inactiveCardColor;
+                        selectGender(Genders.MALE);
                       });
                     },
-                    child: ReusableCard(
-                      color: maleCardColor,
-                      child: GenderWidget(FontAwesomeIcons.mars, 'MALE'),
-                    ),
+                    color: maleCardColor,
+                    child: GenderWidget(FontAwesomeIcons.mars, 'MALE'),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
-                        maleCardColor = inactiveCardColor;
-                        femaleCardColor = activeCardColor;
+                        selectGender(Genders.FEMALE);
                       });
                     },
-                    child: ReusableCard(
-                      color: femaleCardColor,
-                      child: GenderWidget(FontAwesomeIcons.venus, 'FEMALE'),
-                    ),
+                    color: femaleCardColor,
+                    child: GenderWidget(FontAwesomeIcons.venus, 'FEMALE'),
                   ),
                 ),
               ],
@@ -92,4 +93,3 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
-
