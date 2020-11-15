@@ -1,13 +1,13 @@
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/core/genders.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/screens/result_page.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/components/round_icon_button.dart';
+import 'package:bmi_calculator/core/genders.dart';
+import 'package:bmi_calculator/screens/result_page.dart';
+import 'package:bmi_calculator/components/round_icon_button.dart';
 import 'package:bmi_calculator/core/calculator.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/components/reusable_card.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/components/gender_widget.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
+import 'package:bmi_calculator/components/gender_widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/core/constants.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/components/bottom_button.dart';
+import 'package:bmi_calculator/core/constants.dart';
+import 'package:bmi_calculator/components/bottom_button.dart';
 
 class InputPage extends StatefulWidget {
   @override

@@ -1,6 +1,6 @@
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/components/bottom_button.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/core/constants.dart';
-import 'file:///C:/Users/PYSB378644/StudioProjects/bmi-calculator-flutter/lib/components/reusable_card.dart';
+import 'package:bmi_calculator/components/bottom_button.dart';
+import 'package:bmi_calculator/core/constants.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/core/calculator.dart';
 import 'package:flutter/material.dart';
 
